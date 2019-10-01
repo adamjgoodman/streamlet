@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+.navbar {
+	box-shadow: 0px 1px 3px #2a2a2a;
+	background: image_url('nav_bg.png');
+}
+
 .nav-link {
 	font-weight: bold;
 	color: black;
