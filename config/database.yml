@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: streamlet_production
-  username: streamlet
-  password: <%= ENV['STREAMLET_DATABASE_PASSWORD'] %>
+  # username: streamlet
+  # password: <%= ENV['STREAMLET_DATABASE_PASSWORD'] %>
