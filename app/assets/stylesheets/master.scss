@@ -58,7 +58,21 @@ body {
 	text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
 
+h3 {
+	font-weight: 400;
+}
+
 .btn {
 	font-weight: 200;
 	border-radius: 0;
+}
+
+.feature {
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+body {
+  background: image_url('bg.png');
 }
