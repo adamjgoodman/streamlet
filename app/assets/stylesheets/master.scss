@@ -1,22 +1,64 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,200i,300,300i,400,400i,500,500i&display=swap');
+
+body {
+	font-family: 'Kanit', sans-serif;
+}
+
+.clear {
+  clear: both;
+}
 
 .navbar {
 	box-shadow: 0px 1px 3px #2a2a2a;
-	background: image_url('nav_bg.png');
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
-
-.nav-link {
-	font-weight: bold;
-	color: black;
-	}
 
 .navbar-brand {
 	font-weight: bold;
 	margin-left: 3px;
 	margin-bottom: 1px;
+	color: white;
 }
 
 .navbar-icon {
 	margin-bottom: -1px;
 	margin-left: 5px;
+	width: 24px;
+	height: 24px;
+}
+
+.hero {
+	background: image_url('hero.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 420px;
+  position: auto;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+
+.frosty {
+	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.frosty h1 {
+	font-weight: 300;
+	margin-bottom: 0;
+	text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.frosty h2 {
+	font-weight: 400;
+	margin-bottom: 10px;
+	text-shadow: rgba(0,0,0,0.95) 1px 1px;
+}
+
+.btn {
+	font-weight: 200;
+	border-radius: 0;
 }
