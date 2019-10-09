@@ -1,8 +1,8 @@
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Kanit:200,200i,300,300i,400,400i,500,500i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500&display=swap');
 
 body {
-	font-family: 'Kanit', sans-serif;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .clear {
@@ -25,7 +25,7 @@ body {
 }
 
 .navbar-icon {
-	margin-bottom: -1px;
+	margin-bottom: -4px;
 	margin-left: 5px;
 	width: 24px;
 	height: 24px;
@@ -36,7 +36,7 @@ body {
 }
 
 .hero {
-	background: image_url('hero.jpg') no-repeat center center fixed;
+	background: image_url('hero.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
