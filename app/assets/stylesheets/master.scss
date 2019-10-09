@@ -105,6 +105,11 @@ body {
 	margin-right: auto;
 }
 
+.cost-inputs {
+	width: 20%;
+	margin-left: 27px;
+}
+
 .form-check-label {
 	padding: 0px;
 	margin-left: 20px;
@@ -134,4 +139,11 @@ body {
 
 #clear {
 	clear:both;
+}
+
+.invalid-feedback {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
 }

@@ -1,12 +1,18 @@
 <br />
-<div class="soft-box col-10 offset-1">
-  <h1>Add a new course</h1>
+<div class="soft-box col-6 offset-3">
+  <h2 class="user-form-title">Add a new course</h2><br />
   <%= simple_form_for @course, url: instructor_courses_path do |f| %>
+  <div class="form-inputs">
   	<%= f.input :title %>
   	<%= f.input :description %>
+  </div>
+  <div class="cost-inputs">
   	<%= f.input :cost %>
+  </div>
   	<br />
+  <div class="form-actions">
   	<%= f.submit "Create", class: 'btn btn-primary' %>
+  </div>
   <% end %>
   <br />
 </div>
