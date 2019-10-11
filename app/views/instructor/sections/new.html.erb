@@ -1,0 +1,16 @@
+<br />
+	<div class="soft-box col-10 offset-1">
+		<h2 class="user-form-title">Add a new section</h2>
+		<%= simple_form_for @section, url: instructor_course_sections_path(@course) do | f | %>
+			<div class="form-inputs">
+				<br />
+				<%= f.input :title %>
+			</div>
+			<br />
+			<div class="form-actions">
+			<%= f.submit "Add Section", class: 'btn btn-primary' %>
+			</div>
+			<br />
+			<br />
+		<% end %>
+	</div>
