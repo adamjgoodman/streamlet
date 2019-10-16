@@ -1,18 +1,29 @@
 <br />
 
 <div class="soft-box col-10 offset-1">
-	<h1 class="text-center">Learn something today</h1>
+	<div class="col-1">
+		<%= image_tag 'logo.png', class: 'logo' %>
+	</div>
+	<div class="col-10">
+		<h1 class="text-center">Browse Available Courses</h1>
+	</div>
+
 	<hr />
 
 	<% @courses.each do |course| %>
-		<h2 class="text-center">
+		<h1 class="text-center">
 			<%= link_to course.title, course_path(course) %>
-		</h2>
+		</h1>
 		
 		<div class="row">
-				<%= image_tag @course.image.url, class: 'img-fluid' %>
-			<div class="col-sm-10 offset-1 text-center">
-				<%= course.description %>
+			<% if course.image.present? %>
+				<%= image_tag course.image.url, class: 'img-fluid' %>
+			<% else %>
+				<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
+			<% end %>
+			<div class="col-sm-8 offset-2 text-center">
+				<br />
+				<h5><%= course.description %></h5>
 			</div>
 			<div class="col-sm-10 offset-1 text-center">
 				<br />

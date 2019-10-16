@@ -1,24 +1,32 @@
 <br />
 <div class="soft-box col-10 offset-1">
-	<h1 class="text-center"><%= current_course.title %></h1>
-	<%= image_tag @course.image.url, class: 'img-fluid' %>
-	<br />
-	<%= link_to 'Preview', course_path(current_course), class: 'btn btn-warning float-right' %>
-	<br class="clear">
-	
-	<div class="text-center">
+	<h1 class="text-center"><%= current_course.title %>
+		<%= link_to 'Preview', course_path(current_course), class: 'btn btn-warning margin-left', style: 'margin-left: 10px; margin-bottom: 5px;' %>
+		<hr />
+		<% if current_course.image.present? %>
+			<%= image_tag current_course.image.url, class: 'img-fluid' %>
+		<% else %>
+			<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
+		<% end %>
+	</h1>
+
+	<div class="clear"></div>
+<hr />
+	<div class="col-sm-3 col-3 offset-1">
 		<%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
 	</div>
 
+	<div class="col-sm-10 col-10 offset-1">
+	<br />
 	<ul>
 		<% current_course.sections.each do | section | %>
 			<li>
-				<%= section.title %>
-				<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-small' %>
+				<h3><%= section.title %>
+				<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-primary btn-small', style: 'margin-bottom: 5px; margin-left:10px;' %></h3>
 				<ul>
 					<% section.lessons.each do | lesson | %>
 						<li>
-							<b><%= lesson.title %></b>
+							<h4><b><%= lesson.title %></b></h4>
 							-
 							<%= lesson.subtitle %>
 						</li>
@@ -28,5 +36,4 @@
 			</li>
 		<% end %>
 	</ul>
-
 </div>

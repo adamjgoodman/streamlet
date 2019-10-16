@@ -68,6 +68,10 @@ h3 {
 	font-weight: 400;
 }
 
+h5 {
+	font-weight: normal;
+}
+
 .btn {
 	font-weight: 200;
 	border-radius: 0;
@@ -147,4 +151,15 @@ body {
   background-color: #FFEEEE;
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
+}
+
+.img-fluid {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo {
+	height: 50px;
+	float: left;
 }
