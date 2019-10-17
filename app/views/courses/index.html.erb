@@ -1,35 +1,26 @@
-<br />
-
-<div class="soft-box col-10 offset-1">
-	<div class="col-1">
-		<%= image_tag 'logo.png', class: 'logo' %>
-	</div>
-	<div class="col-10">
+<div class="soft-box col-12">
 		<h1 class="text-center">Browse Available Courses</h1>
-	</div>
-
-	<hr />
+</div>
 
 	<% @courses.each do |course| %>
-		<h1 class="text-center">
-			<%= link_to course.title, course_path(course) %>
-		</h1>
-		
-		<div class="row">
-			<% if course.image.present? %>
-				<%= image_tag course.image.url, class: 'img-fluid' %>
-			<% else %>
-				<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
-			<% end %>
-			<div class="col-sm-8 offset-2 text-center">
-				<br />
-				<h5><%= course.description %></h5>
-			</div>
-			<div class="col-sm-10 offset-1 text-center">
-				<br />
-				<%= link_to 'Learn More', course_path(course), class: 'btn btn-primary btn-large' %>
-			</div>
-		</div><hr />
-		<br class="clear" />
+		<div class="soft-box col-8 offset-2">
+			<h1 class="text-center">
+				<%= link_to course.title, course_path(course) %>
+			</h1>			
+			<div class="row">
+				<% if course.image.present? %>
+					<%= image_tag course.image.url, class: 'img-fluid' %>
+				<% else %>
+					<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
+				<% end %>
+				<div class="col-sm-8 offset-2 text-center">
+					<br />
+					<h5><%= course.description %></h5>
+				</div>
+				<div class="col-sm-10 offset-1 text-center">
+					<br />
+					<%= link_to 'Learn More', course_path(course), class: 'btn btn-primary btn-large' %>
+				</div>
+		</div>
+		<br class="clear"></div>
 	<% end %>
-</div>
