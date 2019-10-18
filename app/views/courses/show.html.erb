@@ -1,7 +1,7 @@
 <br />
 
-<div class="soft-box col-10 offset-1">
-	<h1 class="col-sm-4 col-12 text-center"><%= @course.title %></h1>
+<div class="soft-box col-8 offset-2">
+	<h1 class="col-sm-8 col-12"><%= @course.title %></h1>
 	<hr />
 	<div class="row">
 		<% if @course.image.present? %>
@@ -9,7 +9,7 @@
 		<% else %>
 			<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
 		<% end %>
-		<div class="col-sm-2 col-2 offset-2">
+		<div class="col-sm-2 col-2 offset-1">
 			<br />
 			<span class="badge badge-default">
 				<h6>&nbsp;<%= number_to_currency @course.cost %>&nbsp;</h6>
@@ -20,26 +20,32 @@
 			<% end %>
 		</div>
 
-		<div class="col-sm-6 col-6 text-center">
+		<div class="col-12 col-sm-8 text-center">
 			<br />
 			<h5><%= @course.description %></h5>
 		</div>
 	</div>
-<hr />
-	<div class="col-12">
-		<% @course.sections.each do | section | %>
-			<div class="section">
-				<h3><%= section.title %></h3>
-				<% section.lessons.each do | lesson | %>
-					<div class="lesson">
-							<%= link_to lesson_path(lesson) do %>
-							<h4><b><%= lesson.title %></b>
-							-
-							<%= lesson.subtitle %></h4>
-						<% end %>
-					</div>
-				<% end %>
-			</div>
-		<% end %>
-	</div>
+</div>
+
+    <% @course.sections.each do |section| %>
+      <div class="section soft-box col-10 offset-1">
+        <h3 style="font-weight:500;">
+          <%= section.title %>
+        </h3>
+        <div class="row">
+          <% section.lessons.each do |lesson| %>
+            <div class="col-12 col-sm-6">
+              <div class="lesson text-center">
+                <%= link_to lesson_path(lesson) do %>
+                  <h4><b><%= lesson.title %></b></h4>
+                  <h5><%= lesson.subtitle %></h5>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <br class="clr" />
+      </div>
+    <% end %>
+  </div>
 </div>
