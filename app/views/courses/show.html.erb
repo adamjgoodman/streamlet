@@ -18,9 +18,16 @@
 			<% if current_user && current_user == @course.user %>
 				<%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
 			<% end %>
+			<br /><br />
+			<% if current_user && current_user.enrolled_in?(@course) %>
+				<h1 class="badge badge-info">You Are Enrolled</h1>
+			<% else %>
+				<%= link_to 'Enroll Now', course_enrollments_path(@course), class: 'btn btn-success btn-lg', method: :post %>
+			<% end %>
+			<br /><br />
 		</div>
 
-		<div class="col-12 col-sm-8 text-center">
+		<div class="col-12 col-sm-7 offset-1 text-center">
 			<br />
 			<h5><%= @course.description %></h5>
 		</div>
