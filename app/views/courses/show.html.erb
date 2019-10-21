@@ -53,13 +53,13 @@
 	</div>
 </div>
 
-    <% @course.sections.each do |section| %>
+    <% @course.sections.each do | section | %>
       <div class="section soft-box col-10 offset-1">
         <h3 style="font-weight:500;">
           <%= section.title %>
         </h3>
         <div class="row">
-          <% section.lessons.each do |lesson| %>
+          <% section.lessons.rank(:row_order).each do | lesson | %>
             <div class="col-12 col-sm-6">
               <div class="lesson text-center">
                 <%= link_to lesson_path(lesson) do %>
