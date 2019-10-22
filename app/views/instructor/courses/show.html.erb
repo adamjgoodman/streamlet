@@ -13,6 +13,21 @@
    });
 </script>
 
+<script>
+  $(function() {
+    $('.sections').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
+    });
+   });
+</script>
+
 <br />
 <div class="soft-box col-10 offset-1">
 	<h1 class="text-center"><%= current_course.title %>
@@ -33,9 +48,9 @@
 
 	<div class="col-sm-10 col-10 offset-1">
 	<br />
-	<ul>
-		<% current_course.sections.each do | section | %>
-			<li>
+	<ul class="sections">
+		<% current_course.sections.rank(:row_order).each do | section | %>
+			<li data-update-url="<%= instructor_section_path(section) %>">
 				<h3><%= section.title %>
 				<%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-primary btn-small', style: 'margin-bottom: 5px; margin-left:10px;' %></h3>
 				<ul class="lessons">
