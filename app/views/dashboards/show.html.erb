@@ -1,0 +1,16 @@
+<br />
+
+<div class="soft-box col-10 offset-1">
+	<h1>Active Enrollments</h1>
+	<% current_user.enrolled_courses.each do | course | %>
+		<h3 class="text-center"><%= link_to course.title, course_path(course) %></h3>
+
+		<br />
+
+		<%= image_tag course.image.url, class: 'img-fluid' %>
+		<br />
+		<%= course.description %>
+		<br />
+		<%= link_to "Learn More", course_path(course), class: 'btn btn-primary btn-lg' %>
+	<% end %>
+</div>
