@@ -2,15 +2,59 @@
 
 <div class="soft-box col-10 offset-1">
 	<h1>Active Enrollments</h1>
+
 	<% current_user.enrolled_courses.each do | course | %>
-		<h3 class="text-center"><%= link_to course.title, course_path(course) %></h3>
-
+		<hr />
+		<div class="col-12 text-center">
+			<h2>
+				<%= link_to course.title, course_path(course) %>
+			</h2>
+			<% if course.image.present? %>
+				<%= image_tag course.image.url, class: 'img-fluid' %>
+			<% else %>
+				<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
+			<% end %>
+	  </div>
 		<br />
-
-		<%= image_tag course.image.url, class: 'img-fluid' %>
-		<br />
-		<%= course.description %>
-		<br />
-		<%= link_to "Learn More", course_path(course), class: 'btn btn-primary btn-lg' %>
+		<div class="row">
+			<div class="col-8 col-sm-8 offset-2 text-center">
+				<h5><%= course.description %></h5>
+			</div>
+			<div class="col-12 text-center">
+				<%= link_to "Learn More", course_path(course), class: 'btn btn-primary btn-lg' %>
+			</div>
+		</div>
 	<% end %>
+</div>
+
+<div class="soft-box col-10 offset-1">
+	<h1>Active Class Instruction</h1>
+		<% current_user.courses.each do | course | %>
+		
+		<hr />
+
+			<div class="col-12 text-center">
+				<h2>
+					<%= link_to course.title, course_path(course) %>
+				</h2>
+				<% if course.image.present? %>
+					<%= image_tag course.image.url, class: 'img-fluid' %>
+				<% else %>
+					<%= image_tag 'placeholder.jpg', class: 'img-fluid' %>
+				<% end %>
+			</div>
+
+			<br />
+
+			<div class="row">
+				<div class="col-8 col-sm-8 offset-2 text-center">
+					<h5>
+						<%= course.description %>	
+					</h5>
+				</div>
+				<div class="col-12 text-center">
+					<%= link_to "Learn More", course_path(course), class: 'btn btn-primary btn-lg' %>
+				</div>
+			</div>
+		<% end %>
 </div>
