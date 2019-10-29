@@ -61,9 +61,44 @@
 
     <div id="footer">
       <div class="container">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', new_instructor_course_path %>
+            <br />
+            <%= link_to 'My Dashboard', dashboard_path %>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#' %>
+            <br />
+            <%= link_to 'Careers', '#' %>
+            <br />
+            <%= link_to 'Privacy Policy', '#' %>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>Contact</b>
+            <br />
+            goodmanadamj@gmail.com
+            <br />
+            12624 Kenwood Ln Ste B
+            <br />
+            Fort Myers, FL 33907
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>Social</b>
+            <br />
+            <%= link_to 'https://github.com/adamjgoodman' do %>
+              <span class="fa fa-github fa-2x social-button"></span>&nbsp GitHub
+            <% end %>
+            <br />
+              <%= link_to 'https://www.linkedin.com/in/adam-goodman-26a93599/' do %>
+                <span class="fa fa-linkedin fa-2x social-button"></span>&nbsp Linkedin
+              <% end %>
+          </div>
+        </div>
       </div>
     </div>
 
