@@ -64,7 +64,9 @@
 <br />
 
 <div class="col-6 offset-3">
-	<h5>Drag and Drop to Rearrange</h5>
+	<% if current_course.sections.present? %>
+		<h5>Drag and Drop to Rearrange</h5>
+	<% end %>
 </div>
 
 	<ul class="sections">
