@@ -51,10 +51,26 @@ button {
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
+.careero {
+	background: image_url('careero.jpeg') no-repeat center center;
+	background-position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 420px;
+  position: auto;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
 
 .frosty {
 	background: rgba(0,0,0,0.8);
 	color: white;
+}
+
+.frosty-white {
+	background: rgba(255,255,255,0.8);
+	color: black;
 }
 
 .frosty h1 {
@@ -228,4 +244,9 @@ ul .fa {
 
 .team-pic {
 	border-radius: 100%;
+}
+
+.careers-pic {
+	border-radius: 100%;
+	max-width: 50%;
 }

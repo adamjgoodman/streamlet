@@ -74,20 +74,20 @@
             <br />
             <%= link_to 'Team', team_path %>
             <br />
-            <%= link_to 'Careers', '#' %>
+            <%= link_to 'Careers', careers_path %>
             <br />
             <%= link_to 'Privacy Policy', privacy_path %>
           </div>
           <div class="col-12 col-sm-3">
             <b>Contact</b>
             <br />
-            goodmanadamj@gmail.com
+            <%= mail_to 'goodmanadamj@gmail.com' %>
             <br />
             12624 Kenwood Ln Ste B
             <br />
             Fort Myers, FL 33907
           </div>
-          <div class="col-12 col-sm-3">
+          <div class="col-12 col-sm-3 social">
             <b>Social</b>
             <br />
             <%= link_to 'https://github.com/adamjgoodman' do %>
