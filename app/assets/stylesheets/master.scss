@@ -10,6 +10,11 @@ button {
 		font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+.scrip {
+	font-size: 20px;
+	font-weight: 200;
+}
+
 .clear {
   clear: both;
 }
@@ -36,12 +41,8 @@ button {
 	height: 24px;
 }
 
-.nav-item {
-
-}
-
 .hero {
-	background: image_url('hero.jpeg') no-repeat center center fixed;
+	background: image_url('hero2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,8 +64,39 @@ button {
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
+.courso {
+	background: image_url('hero.jpeg') no-repeat center center;
+	background-position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 150px;
+  position: auto;
+  box-shadow: 0px px 8px #2a2a2a;
+}
+
+.soft-box-frosty {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+	background: rgba(0,0,0,0.9);
+	color: white;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 20px;
+  padding: 10px;
+  margin-left:20px;
+}
+
 .frosty {
 	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.frosty-c {
+	background: rgba(0,0,0,0.9);
+	text-shadow: rgba(0,0,0,0.95) 1px 1px;
 	color: white;
 }
 
