@@ -1,6 +1,6 @@
 <div class="courso col-12", style='padding:0px'>
 		<br />
-		<div class="col-4 frosty">
+		<div class="col-12 col-sm-4 frosty">
 			<br />
 			<h1 class="text-left">Browse Available Courses</h1>
 			<br />
@@ -9,8 +9,8 @@
 
 <div class="row">
 	<% @courses.each do |course| %>
-		<div class="col-5 offset-1", style="margin-left:auto; margin-right:auto; float:left;">
-			<div class="soft-box", style="height:400px;">
+		<div class="col-12 col-sm-5 offset-1", style="margin-left:auto; margin-right:auto;">
+			<div class="soft-box", style="height:80%;">
 				<div class="col-12 text-center">
 					<h2>
 						<%= link_to course.title, course_path(course), style:"font-weight: 400;" %>
