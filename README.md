@@ -2,7 +2,7 @@
 
 Instructional video course web application.
 
-Ruby • Ruby on Rails • Postgresql database • Bootstrap • Devise for user managemen • Stripe payment processing • Mobile-first responsive CSS3 • Javascript
+Ruby • Ruby on Rails • Postgresql database • Bootstrap • Devise for user management • Stripe payment processing • Mobile-first responsive CSS3 • Javascript
 
 Users are able to create courses as instructors and upload corresponding sections and respective lesson videos.
 Users can enroll in courses created by others.
